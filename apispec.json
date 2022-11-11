@@ -50,6 +50,7 @@
 									"type": "array",
 									"items": {
 										"type": "object",
+										"required": ["id", "name"],
 										"properties": {
 											"id": {
 												"type": "integer",
@@ -59,6 +60,12 @@
 											"name": {
 												"type": "string",
 												"nullable": false
+											},
+											"tags": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
 											},
 											"priorities": {
 												"type": "string"
@@ -228,6 +235,48 @@
 						}
 					}
 				]
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Todolist": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string",
+						"maxLength": 100,
+						"minLength": 1
+					},
+					"tags": {
+						"type": "array",
+						"items": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"priorities": {
+						"type": "string",
+						"enum": ["low", "medium", "high"]
+					},
+					"due_date": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			}
+		},
+		"parameters": {
+			"todolistId": {
+				"in": "path",
+				"name": "id",
+				"schema": {
+					"type": "string"
+				},
+				"required": true
 			}
 		}
 	}
