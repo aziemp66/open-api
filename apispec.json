@@ -10,8 +10,8 @@
 			"url": "https:/github.con/aziemp66"
 		},
 		"license": {
-			"name": "APACHE 2.0",
-			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+			"name": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
 		}
 	},
 	"servers": [],
