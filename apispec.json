@@ -37,13 +37,33 @@
 	},
 	"paths": {
 		"/todolist": {
-			"get": {},
-			"post": {}
+			"get": {
+				"summary": "Get all todo list",
+				"description": "Only will return Active todolist, completed todolist or cancelled todolist will not be returned",
+				"responses": {}
+			},
+			"post": {
+				"summary": "Create new todo list",
+				"description": "Create a new Active todo list",
+				"responses": {}
+			}
 		},
 		"/todolist/{id}": {
-			"get": {},
-			"put": {},
-			"delete": {}
+			"get": {
+				"summary": "Get todo list by id",
+				"description": "Get todo list by id",
+				"responses": {}
+			},
+			"put": {
+				"summary": "Update todo list by id",
+				"description": "Update todo list by id",
+				"responses": {}
+			},
+			"delete": {
+				"summary": "Delete todo list by id",
+				"description": "Delete todo list by id",
+				"responses": {}
+			}
 		}
 	}
 }
