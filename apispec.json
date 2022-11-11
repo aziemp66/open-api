@@ -1,0 +1,19 @@
+{
+	"openapi": "3.0.3",
+	"info": {
+		"title": "My API",
+		"version": "1.0.0",
+		"description": "OpenAPI for TodoList RESTful API",
+		"contact": {
+			"name": "Azie Melza Pratama",
+			"email": "aziemp66@gmail.com",
+			"url": "https:/github.con/aziemp66"
+		},
+		"license": {
+			"name": "APACHE 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+		}
+	},
+	"servers": [],
+	"paths": {}
+}
