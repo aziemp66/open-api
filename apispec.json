@@ -40,7 +40,21 @@
 			"get": {
 				"summary": "Get all todo list",
 				"description": "Only will return Active todolist, completed todolist or cancelled todolist will not be returned",
-				"responses": {}
+				"responses": {},
+				"parameters": [
+					{
+						"name": "include done",
+						"description": "include done todo list",
+						"required": false,
+						"in": "query"
+					},
+					{
+						"name": "name",
+						"description": "search todo list by name",
+						"required": false,
+						"in": "query"
+					}
+				]
 			},
 			"post": {
 				"summary": "Create new todo list",
@@ -62,7 +76,15 @@
 			"delete": {
 				"summary": "Delete todo list by id",
 				"description": "Delete todo list by id",
-				"responses": {}
+				"responses": {},
+				"parameters": [
+					{
+						"name": "todo list id",
+						"description": "todo list id",
+						"in": "path",
+						"required": true
+					}
+				]
 			}
 		}
 	}
