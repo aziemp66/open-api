@@ -38,9 +38,42 @@
 	"paths": {
 		"/todolist": {
 			"get": {
+				"tags": ["Todolist"],
 				"summary": "Get all todo list",
 				"description": "Only will return Active todolist, completed todolist or cancelled todolist will not be returned",
-				"responses": {},
+				"responses": {
+					"200": {
+						"description": "Get Todolist Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "integer",
+												"format": "int64",
+												"nullable": false
+											},
+											"name": {
+												"type": "string",
+												"nullable": false
+											},
+											"priorities": {
+												"type": "string"
+											},
+											"due_date": {
+												"type": "string",
+												"format": "date"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
 				"parameters": [
 					{
 						"name": "include done",
@@ -76,6 +109,7 @@
 				]
 			},
 			"post": {
+				"tags": ["Todolist"],
 				"summary": "Create new todo list",
 				"description": "Create a new Active todo list",
 				"responses": {},
