@@ -46,13 +46,24 @@
 						"name": "include done",
 						"description": "include done todo list",
 						"required": false,
-						"in": "query"
+						"in": "query",
+						"schema": {
+							"type": "boolean",
+							"default": false,
+							"nullable": true
+						}
 					},
 					{
 						"name": "name",
 						"description": "search todo list by name",
 						"required": false,
-						"in": "query"
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": false,
+							"maxLength": 100,
+							"minLength": 1
+						}
 					}
 				]
 			},
