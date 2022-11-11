@@ -113,11 +113,44 @@
 				"summary": "Update todo list by id",
 				"description": "Update todo list by id",
 				"responses": {},
+				"parameters": [
+					{
+						"name": "id",
+						"description": "id of todo list",
+						"required": true,
+						"in": "path",
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
 				"requestBody": {
 					"required": true,
 					"content": {
 						"application/json": {
-							"schema": {}
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string",
+										"maxLength": 100,
+										"minLength": 1
+									},
+									"priorities": {
+										"type": "string",
+										"enum": ["low", "medium", "high"]
+									},
+									"due_date": {
+										"type": "string",
+										"format": "date-time"
+									},
+									"note": {
+										"type": "string",
+										"maxLength": 1000,
+										"minLength": 1
+									}
+								}
+							}
 						}
 					}
 				}
