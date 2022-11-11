@@ -20,7 +20,7 @@
 			"description": "Local server"
 		},
 		{
-			"url": "https://{environtment}:5000/api/v1",
+			"url": "https://{environtment}.aziezamannow.com/api/v1",
 			"description": "Todo RESTful API",
 			"variables": {
 				"environment": {
@@ -133,8 +133,15 @@
 								"properties": {
 									"name": {
 										"type": "string",
-										"maxLength": 100,
-										"minLength": 1
+										"minLength": 1,
+										"maxLength": 100
+									},
+									"tags": {
+										"type": "array",
+										"items": {
+											"type": "string",
+											"minLength": 1
+										}
 									},
 									"priorities": {
 										"type": "string",
