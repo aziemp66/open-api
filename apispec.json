@@ -31,5 +31,9 @@
 			}
 		}
 	],
+	"externalDocs": {
+		"description": "Find out more about Me",
+		"url": "https://github.com/aziemp66"
+	},
 	"paths": {}
 }
