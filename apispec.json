@@ -35,5 +35,15 @@
 		"description": "Find out more about Me",
 		"url": "https://github.com/aziemp66"
 	},
-	"paths": {}
+	"paths": {
+		"/todolist": {
+			"get": {},
+			"post": {}
+		},
+		"/todolist/{id}": {
+			"get": {},
+			"put": {},
+			"delete": {}
+		}
+	}
 }
