@@ -38,6 +38,11 @@
 	"paths": {
 		"/todolist": {
 			"get": {
+				"security": [
+					{
+						"TodoListAuth": []
+					}
+				],
 				"tags": ["Todolist"],
 				"summary": "Get all todo list",
 				"description": "Only will return Active todolist, completed todolist or cancelled todolist will not be returned",
@@ -91,6 +96,11 @@
 				]
 			},
 			"post": {
+				"security": [
+					{
+						"TodoListAuth": []
+					}
+				],
 				"tags": ["Todolist"],
 				"summary": "Create new todo list",
 				"description": "Create a new Active todo list",
@@ -149,11 +159,21 @@
 		},
 		"/todolist/{id}": {
 			"get": {
+				"security": [
+					{
+						"TodoListAuth": []
+					}
+				],
 				"summary": "Get todo list by id",
 				"description": "Get todo list by id",
 				"responses": {}
 			},
 			"put": {
+				"security": [
+					{
+						"TodoListAuth": []
+					}
+				],
 				"summary": "Update todo list by id",
 				"description": "Update todo list by id",
 				"responses": {},
@@ -201,6 +221,11 @@
 				}
 			},
 			"delete": {
+				"security": [
+					{
+						"TodoListAuth": []
+					}
+				],
 				"summary": "Delete todo list by id",
 				"description": "Delete todo list by id",
 				"responses": {},
@@ -219,6 +244,13 @@
 		}
 	},
 	"components": {
+		"securitySchemes": {
+			"TodolistAuth": {
+				"type": "apiKey",
+				"in": "header",
+				"name": "X-Api-Key"
+			}
+		},
 		"schemas": {
 			"Todolist": {
 				"type": "object",
