@@ -70,7 +70,37 @@
 			"post": {
 				"summary": "Create new todo list",
 				"description": "Create a new Active todo list",
-				"responses": {}
+				"responses": {},
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string",
+										"maxLength": 100,
+										"minLength": 1
+									},
+									"priorities": {
+										"type": "string",
+										"enum": ["low", "medium", "high"]
+									},
+									"due_date": {
+										"type": "string",
+										"format": "date-time"
+									},
+									"note": {
+										"type": "string",
+										"maxLength": 1000,
+										"minLength": 1
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		},
 		"/todolist/{id}": {
@@ -82,7 +112,15 @@
 			"put": {
 				"summary": "Update todo list by id",
 				"description": "Update todo list by id",
-				"responses": {}
+				"responses": {},
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
 			},
 			"delete": {
 				"summary": "Delete todo list by id",
