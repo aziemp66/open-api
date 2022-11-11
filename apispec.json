@@ -14,6 +14,22 @@
 			"url": "https://opensource.org/licenses/MIT"
 		}
 	},
-	"servers": [],
+	"servers": [
+		{
+			"url": "http://localhost:8080",
+			"description": "Local server"
+		},
+		{
+			"url": "https://{environtment}:5000/api/v1",
+			"description": "Todo RESTful API",
+			"variables": {
+				"environment": {
+					"description": "Server environment",
+					"default": "dev",
+					"enum": ["prod", "dev", "test"]
+				}
+			}
+		}
+	],
 	"paths": {}
 }
