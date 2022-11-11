@@ -63,6 +63,14 @@
 							"nullable": false,
 							"maxLength": 100,
 							"minLength": 1
+						},
+						"examples": {
+							"java": {
+								"value": "Java"
+							},
+							"python": {
+								"value": "Python"
+							}
 						}
 					}
 				]
@@ -75,6 +83,15 @@
 					"required": true,
 					"content": {
 						"application/json": {
+							"examples": {
+								"java": {
+									"value": {
+										"name": "Belajar Pemrograman Java",
+										"tags": ["java", "programming", "backend"],
+										"priority": "medium"
+									}
+								}
+							},
 							"schema": {
 								"type": "object",
 								"properties": {
@@ -171,7 +188,10 @@
 						"name": "todo list id",
 						"description": "todo list id",
 						"in": "path",
-						"required": true
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
 					}
 				]
 			}
